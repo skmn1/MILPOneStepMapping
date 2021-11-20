@@ -1,0 +1,1 @@
+The MILP model presented in this repository, is an implementation of the one step deployment formulation which is described in the paper "the Optimizing the deployment of tree-shaped functional graphs of real-time system on distributed architectures".
