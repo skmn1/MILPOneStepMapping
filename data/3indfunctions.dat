@@ -1,0 +1,64 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: kamnis
+ * Creation Date: Sep 29, 2021 at 9:53:42 AM
+ *********************************************/
+ f = 3;
+ s = 0;
+ c = 1;
+ b = 0;
+ p = 3;
+
+ functionSet 	= {<1,10>,<2,10>,<3,10>};
+ 
+ signalSet 		= {};
+ 
+ nodeSet 		= {<1,1>};
+ 
+ busSet 		= {};
+ 
+ wcetOfFunctionOnNodeSet  	= [1,5,2] ;
+
+ wcetOfSignalOnBusSet 		= [];
+ 
+ dp							= [
+ 								// dependency of f1 on other functions
+ 								0,0,
+ 								
+ 								// dependency of f2 on other functions
+ 								0,0,
+ 								
+ 								// dependency of f3 on other functions
+ 								0,0,
+ 								
+ 								];
+ 
+ Xi							= [
+ 								// concurency with f1
+ 								1,1,
+ 								
+ 								// concurency with f2
+ 								1,1,
+ 		
+ 								// concurency with f3
+ 								1,1,								
+ 								
+ 								];
+ 								
+ 								
+  Xis							= [
+ 								
+ 								
+ 								];
+ 								
+ 
+ pathSet = {<1,1,1,3>,<2,2,2,8>,<3,3,3,4>};
+ 
+
+
+ // constants
+ 
+ BIG_M = 10000;
+ CONTEXT_SWITCH_COST = 0;
+ EPS = 0.000000001;
+ 

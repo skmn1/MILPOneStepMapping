@@ -1,0 +1,95 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: kamnis
+ * Creation Date: Jan 12, 2021 at 10:18:49 AM
+ *********************************************/
+
+
+ 
+ f = 5;
+ s = 4;
+ c = 1;
+ b = 0;
+ p = 2;
+
+ functionSet 	= {<1,500>,<2,500>,<3,50>,<4,50>,<5,50>};
+ 
+ signalSet 		= {<1,500,1,{2}>,<2,50,3,{4}>,<3,50,4,{5}>,<4,50,4,{2}>};
+ 
+ nodeSet 		= {<1,0.8>};
+ 
+ busSet 		= {};
+ 
+ wcetOfFunctionOnNodeSet  	= [1,1,1,1,1] ;
+
+ wcetOfSignalOnBusSet 		= [];
+ 
+ dp							= [
+ 								// dependency of f1 on other functions
+ 								0,0,0,0,
+ 								
+ 								// dependency of f2 on other functions
+ 								1,0,0,0,
+ 								
+ 								// dependency of f3 on other functions
+ 								0,0,0,0,
+ 								
+ 								// dependency of f4 on other functions
+ 								0,0,1,0,
+ 								
+ 								// dependency of f5 on other functions
+ 								0,0,1,0
+ 								
+ 							
+ 								
+ 								];
+ 
+ Xi							= [
+ 								// concurency with f1
+ 								0,1,1,1,
+ 								
+ 								// concurency with f2
+ 								0,0,0,1,
+ 		
+ 								// concurency with f3
+ 								1,1,0,0,
+ 								
+ 								//concurrency with f4
+ 								1,1,0,0,
+ 								
+ 								//concurrency with f5
+ 								1,1,0,0,
+ 								
+ 								
+ 								];
+ 								
+ 								
+  Xis							= [
+ 								// concurency with s1
+ 								1,1,1,
+ 								
+ 								// concurency with s2
+ 								1,0,1,
+ 		
+ 								// concurency with s3
+ 								1,0,0,
+ 								
+ 								// concurency with s4
+ 								1,0,1
+ 								
+ 								];
+ 								
+ 
+ pathSet = {<1,1,1,200>,<2,2,2,200>};
+ 
+
+
+ // constants
+ 
+ BIG_M = 10000;
+ CONTEXT_SWITCH_COST = 0;
+ EPS = 0.000000001;
+ 
+ 
+ 
+ 

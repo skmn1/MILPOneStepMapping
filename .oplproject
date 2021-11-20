@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<configs>
+		<config default="true" name="Configuration1" category="opl">
+			<ref name="mapping.mod" type="model">
+			</ref>
+			<ref name="mapping.dat" type="data">
+			</ref>
+			<ref name="sett.ops" type="setting">
+			</ref>
+		</config>
+		<config default="false" name="pump" category="opl">
+			<ref name="data/minePump.dat" type="data">
+			</ref>
+			<ref name="mapping.mod" type="model">
+			</ref>
+		</config>
+		<config default="false" name="3indfunction" category="opl">
+			<ref name="data/3indfunctions.dat" type="data">
+			</ref>
+			<ref name="mapping.mod" type="model">
+			</ref>
+			<ref name="3indfunc.ops" type="setting">
+			</ref>
+		</config>
+	</configs>
+	
+</project>
